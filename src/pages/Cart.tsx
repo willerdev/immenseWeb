@@ -41,7 +41,7 @@ export default function Cart() {
   }
 
   const subtotal = cartItems.reduce((sum, item) => sum + (item.products?.price || 0) * item.quantity, 0);
-  const shipping = subtotal > 0 ? 9.99 : 0;
+  const shipping = subtotal > 0 ? 2000 : 0;
   const total = subtotal + shipping;
 
   if (cartItems.length === 0) {
@@ -76,7 +76,7 @@ export default function Cart() {
                     />
                     <div>
                       <h3 className="text-lg font-semibold">{item.products?.name}</h3>
-                      <p className="text-[#227337] font-bold">${item.products?.price}</p>
+                      <p className="text-[#227337] font-bold">{item.products?.price} RWF</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -112,15 +112,15 @@ export default function Cart() {
             <div className="space-y-3">
               <div className="flex justify-between">
                 <span>Subtotal</span>
-                <span>${subtotal.toFixed(2)}</span>
+                <span>{subtotal.toFixed(2)} RWF</span>
               </div>
               <div className="flex justify-between">
-                <span>Shipping</span>
-                <span>${shipping.toFixed(2)}</span>
+                <span>Delivery Fee</span>
+                <span>{shipping.toFixed(2)} RWF</span>
               </div>
               <div className="flex justify-between font-bold text-lg pt-3 border-t">
                 <span>Total</span>
-                <span>${total.toFixed(2)}</span>
+                <span>{total.toFixed(2)} RWF</span>
               </div>
             </div>
             <Link 
