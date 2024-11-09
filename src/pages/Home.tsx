@@ -67,7 +67,7 @@ export default function Home() {
               name={product.name}
               price={product.price}
               image={product.image_url}
-              description={product.description}
+              // description={product.description}
             />
           ))}
         </div>
