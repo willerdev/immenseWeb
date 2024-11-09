@@ -1,9 +1,15 @@
 import React from 'react';
-import { Home, ShoppingCart, User, Package, Mail, Phone, MapPin } from 'lucide-react';
+import { Home, ShoppingCart, Phone, Package, User } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
+import { useCart } from '../hooks/useCart';
+import { getTotalCartItems } from '../utils/cartUtils';
 
 export default function Footer() {
   const location = useLocation();
+  const { user } = useAuth();
+  const { cartItems } = useCart(user?.id);
+  const totalItems = getTotalCartItems(cartItems);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -16,11 +22,16 @@ export default function Footer() {
             <Home className="w-6 h-6" />
             <span className="text-xs mt-1">Home</span>
           </Link>
-          <Link to="/cart" className={`flex flex-col items-center py-3 ${isActive('/cart') ? 'text-[#227337]' : 'text-gray-500'}`}>
+          <Link to="/cart" className={`flex flex-col items-center py-3 relative ${isActive('/cart') ? 'text-[#227337]' : 'text-gray-500'}`}>
             <ShoppingCart className="w-6 h-6" />
+            {totalItems > 0 && (
+              <span className="absolute top-2 right-3 bg-[#227337] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
+                {totalItems}
+              </span>
+            )}
             <span className="text-xs mt-1">Cart</span>
           </Link>
-          <Link to="tel:+250788435665" className={`flex flex-col items-center py-3 ${isActive('/cart') ? 'text-[#227337]' : 'text-gray-500'}`}>
+          <Link to="tel:+250788435665" className="flex flex-col items-center py-3 text-gray-500">
             <Phone className="w-6 h-6" />
             <span className="text-xs mt-1">Call Us</span>
           </Link>
