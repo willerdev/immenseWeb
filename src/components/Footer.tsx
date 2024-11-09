@@ -20,6 +20,10 @@ export default function Footer() {
             <ShoppingCart className="w-6 h-6" />
             <span className="text-xs mt-1">Cart</span>
           </Link>
+          <Link to="tel:+250788435665" className={`flex flex-col items-center py-3 ${isActive('/cart') ? 'text-[#227337]' : 'text-gray-500'}`}>
+            <Phone className="w-6 h-6" />
+            <span className="text-xs mt-1">Call Us</span>
+          </Link>
           <Link to="/orders" className={`flex flex-col items-center py-3 ${isActive('/orders') ? 'text-[#227337]' : 'text-gray-500'}`}>
             <Package className="w-6 h-6" />
             <span className="text-xs mt-1">Orders</span>
