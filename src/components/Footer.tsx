@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, ShoppingCart, Phone, Package, User } from 'lucide-react';
+import { Home, ShoppingCart, Phone, Package, User, Mail, MapPin } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useCart } from '../hooks/useCart';
