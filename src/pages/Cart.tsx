@@ -8,6 +8,22 @@ export default function Cart() {
   const { user } = useAuth();
   const { cartItems, loading, error, updateQuantity, removeFromCart } = useCart(user?.id);
 
+  const handleQuantityChange = async (itemId: number, newQuantity: number) => {
+    try {
+      await updateQuantity(itemId, newQuantity);
+    } catch (error) {
+      console.error('Failed to update quantity:', error);
+    }
+  };
+
+  const handleRemoveItem = async (itemId: number) => {
+    try {
+      await removeFromCart(itemId);
+    } catch (error) {
+      console.error('Failed to remove item:', error);
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 pt-20 flex items-center justify-center">
@@ -66,21 +82,21 @@ export default function Cart() {
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2">
                       <button 
-                        onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                        onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
                         className="p-1 hover:bg-gray-100 rounded"
                       >
                         <Minus className="w-4 h-4" />
                       </button>
                       <span className="w-8 text-center">{item.quantity}</span>
                       <button 
-                        onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                        onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
                         className="p-1 hover:bg-gray-100 rounded"
                       >
                         <Plus className="w-4 h-4" />
                       </button>
                     </div>
                     <button 
-                      onClick={() => removeFromCart(item.id)}
+                      onClick={() => handleRemoveItem(item.id)}
                       className="text-red-500 hover:text-red-600"
                     >
                       <Trash2 className="w-5 h-5" />
