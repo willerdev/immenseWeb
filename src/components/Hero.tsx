@@ -16,15 +16,13 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Discover Premium Tech Essentials
+              Welcome to Immense Solutions Ltd
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-gray-100">
-              Explore our curated collection of premium gadgets and accessories. Quality meets innovation.
-            </p>
-            <button className="bg-white text-[#227337] px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-2">
+          
+            {/* <button className="bg-white text-[#227337] px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-2">
               <span>Shop Now</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </button> */}
           </div>
           
           <div className="mt-8 md:mt-0 bg-white/10 backdrop-blur-sm rounded-lg p-6 space-y-4">
@@ -32,7 +30,7 @@ export default function Hero() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5" />
-                <span>0788435665</span>
+                <span>(+250)788435665</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5" />
