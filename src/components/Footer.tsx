@@ -11,7 +11,7 @@ export default function Footer() {
     <>
       {/* Mobile Footer Navigation */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t md:hidden">
-        <div className="grid grid-cols-4 gap-1">
+        <div className="grid grid-cols-5 gap-1">
           <Link to="/" className={`flex flex-col items-center py-3 ${isActive('/') ? 'text-[#227337]' : 'text-gray-500'}`}>
             <Home className="w-6 h-6" />
             <span className="text-xs mt-1">Home</span>
