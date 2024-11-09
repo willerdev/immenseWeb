@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, ShoppingCart, User, Package } from 'lucide-react';
+import { Home, ShoppingCart, User, Package, Mail, Phone, MapPin } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Footer() {
@@ -60,18 +60,21 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-              <p className="text-gray-500 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-[#227337]"
-                />
-                <button className="px-4 py-2 bg-[#227337] text-white rounded-r-md hover:bg-[#1b5a2b]">
-                  Subscribe
-                </button>
-              </div>
+              <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center space-x-2 text-gray-500">
+                  <Phone className="w-5 h-5 text-[#227337]" />
+                  <span>07895644555</span>
+                </li>
+                <li className="flex items-center space-x-2 text-gray-500">
+                  <Mail className="w-5 h-5 text-[#227337]" />
+                  <span>paci@gmail.com</span>
+                </li>
+                <li className="flex items-start space-x-2 text-gray-500">
+                  <MapPin className="w-5 h-5 text-[#227337] mt-1" />
+                  <span>Kigali Chic Building First Floor E047C<br />Kigali, Rwanda</span>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t text-center text-gray-500">
