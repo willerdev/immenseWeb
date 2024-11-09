@@ -47,7 +47,7 @@ export default function ProductCard({ id, name, price, image, description }: Pro
         <div className="p-4">
           <h3 className="text-lg font-semibold text-gray-800 line-clamp-1">{name}</h3>
           <p className="text-gray-600 text-sm mt-1 line-clamp-2">{description}</p>
-          <p className="text-[#227337] font-bold mt-2">${price.toFixed(2)}</p>
+          <p className="text-[#227337] font-bold mt-2">{price.toFixed(2)} Frw</p>
           <button 
             onClick={handleAddToCart}
             className="mt-3 w-full bg-[#227337] text-white py-2 rounded-md hover:bg-[#1b5a2b] transition-colors flex items-center justify-center space-x-2"

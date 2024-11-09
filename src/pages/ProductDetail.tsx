@@ -148,7 +148,7 @@ export default function ProductDetail() {
             </div>
             <div className="p-6">
               <h1 className="text-3xl font-bold text-gray-800">{product.name}</h1>
-              <p className="text-2xl font-bold text-[#227337] mt-4">${product.price}</p>
+              <p className="text-2xl font-bold text-[#227337] mt-4">{product.price.toFixed(2)} Frw</p>
               <div className="mt-6 space-y-4">
                 <p className="text-gray-600">{product.description}</p>
                 <div className="flex items-center space-x-4">
