@@ -11,6 +11,7 @@ import Signup from './pages/Signup';
 import Checkout from './pages/Checkout';
 import Orders from './pages/Orders';
 import Wishlist from './pages/Wishlist';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -20,13 +21,15 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/wishlist" element={<Wishlist />} />
+          
+          {/* Protected Routes */}
+          <Route path="/cart" element={<PrivateRoute><Cart /></PrivateRoute>} />
+          <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+          <Route path="/checkout" element={<PrivateRoute><Checkout /></PrivateRoute>} />
+          <Route path="/orders" element={<PrivateRoute><Orders /></PrivateRoute>} />
+          <Route path="/wishlist" element={<PrivateRoute><Wishlist /></PrivateRoute>} />
         </Routes>
         <Footer />
       </div>
