@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav className="bg-[#227337] text-white py-4 px-6 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <Store className="w-8 h-8" />
+          <img src="https://i.imgur.com/T6VKzsH.png" alt="Logo" className="w-8 h-8" />
           <span className="text-2xl font-bold">immense</span>
         </Link>
         

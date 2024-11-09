@@ -8,7 +8,7 @@ export default function Hero() {
         <img
           src="https://images.unsplash.com/photo-1491933382434-500287f9b54b?auto=format&fit=crop&w=1920&q=80"
           alt="Hero Background"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-[500px] object-cover opacity-20"
         />
       </div>
       
