@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
           <img src="https://i.imgur.com/T6VKzsH.png" alt="Logo" className="w-10 h-8" />
-          <span className="text-2xl font-bold">Immense Solutions</span>
+          <span className="text-2xl font-bold">Immense S.</span>
         </Link>
         
         <div className="flex items-center space-x-6">

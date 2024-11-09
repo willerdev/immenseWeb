@@ -58,7 +58,7 @@ export default function ProductCard({ id, name, price, image, description }: Pro
             ) : (
               <>
                 <ShoppingCart className="w-4 h-4" />
-                <span>Add to Cart</span>
+                <span>Buy Now</span>
               </>
             )}
           </button>
